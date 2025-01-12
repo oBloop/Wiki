@@ -26,18 +26,18 @@ function Nav(_thisPage) {
 }
 
 function LoadPageStyles(_page) {
-    // Créer un élément link pour la feuille de style
-    var cssLink = document.createElement("link");
-    cssLink.rel = "stylesheet";
-    cssLink.type = "text/css";
-    cssLink.href = front + "CSS/" + _page + ".css";
-
     document.title = "o'Bloop - " + _page;
 
     // Créer un élément link pour l'icône favicon
     var faviconLink = document.createElement("link");
     faviconLink.rel = "icon";
     faviconLink.href = front + "IMG/ICO/ICO.ico";
+
+    // Créer un élément link pour la feuille de style
+    var cssLink = document.createElement("link");
+    cssLink.rel = "stylesheet";
+    cssLink.type = "text/css";
+    cssLink.href = front + "CSS/" + _page + ".css";
     
     // Ajouter l'élément link au head de la page
     document.head.appendChild(cssLink);
