@@ -1,8 +1,8 @@
 var front;
-if (window.location.hostname === "127.0.0.1:5500") {
-    front = "/docs/Site/";
+if (window.location.hostname === "127.0.0.1") {
+    front = "/o'Bloop/";
 } else {
-    front = "/Wiki/Site/";
+    front = "/Wiki/o'Bloop/";
 }
 
 function Navigate(_page) {
@@ -39,6 +39,11 @@ function LoadPageStyles(_page) {
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
     cssLink.href = front + "CSS/" + _page + ".css";
+
+    // Debugging logs
+    console.log("CSS Link:", cssLink.href);
+    console.log("Favicon Link:", faviconLink.href);
+    
 
     // Ajouter l'élément link au head de la page
     document.head.appendChild(cssLink);
