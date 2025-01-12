@@ -2,7 +2,7 @@ var front;
 if (window.location.hostname === "127.0.0.1") {
     front = "/Wiki/";
 } else {
-    front = "/";
+    front = "/Wiki/";
 }
 
 function Navigate(_page) {
