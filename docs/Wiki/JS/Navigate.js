@@ -26,8 +26,6 @@ function Nav(_thisPage) {
 }
 
 function LoadPageStyles(_page) {
-    document.title = "o'Bloop - " + _page;
-
     // Créer un élément link pour l'icône favicon
     var faviconLink = document.createElement("link");
     faviconLink.rel = "icon";
@@ -39,6 +37,10 @@ function LoadPageStyles(_page) {
     cssLink.type = "text/css";
     cssLink.href = front + "Wiki/CSS/" + _page + ".css";
     
+
+    document.title = "o'Bloop - " + _page;
+
+
     // Ajouter l'élément link au head de la page
     document.head.appendChild(cssLink);
     document.head.appendChild(faviconLink);
