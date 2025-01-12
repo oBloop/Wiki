@@ -1,6 +1,6 @@
 var front;
 if (window.location.hostname === "127.0.0.1") {
-    front = "/o'Bloop/";
+    front = "/Wiki/";
 } else {
     front = "/Wiki/o'Bloop/";
 }
@@ -26,25 +26,19 @@ function Nav(_thisPage) {
 }
 
 function LoadPageStyles(_page) {
-    document.title = "o'Pelagos - " + _page;
-    if (_page == 'index') document.title = "o'Pelagos - Wiki";
-
-    // Créer un élément link pour l'icône favicon
-    var faviconLink = document.createElement("link");
-    faviconLink.rel = "icon";
-    faviconLink.href = front + "IMG/ICO/ICO.ico";
-    
     // Créer un élément link pour la feuille de style
     var cssLink = document.createElement("link");
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
     cssLink.href = front + "CSS/" + _page + ".css";
 
-    // Debugging logs
-    console.log("CSS Link:", cssLink.href);
-    console.log("Favicon Link:", faviconLink.href);
-    
+    document.title = "o'Bloop - " + _page;
 
+    // Créer un élément link pour l'icône favicon
+    var faviconLink = document.createElement("link");
+    faviconLink.rel = "icon";
+    faviconLink.href = front + "IMG/ICO/ICO.ico";
+    
     // Ajouter l'élément link au head de la page
     document.head.appendChild(cssLink);
     document.head.appendChild(faviconLink);
