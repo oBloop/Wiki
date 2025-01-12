@@ -1,5 +1,5 @@
 var front;
-if (window.location.hostname === "127.0.0.1") {
+if (window.location.hostname === "127.0.0.1:5500") {
     front = "/docs/Site/";
 } else {
     front = "/Wiki/Site/";
