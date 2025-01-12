@@ -1,6 +1,6 @@
 var front;
 if (window.location.hostname === "127.0.0.1") {
-    front = "/Wiki/";
+    front = "/";
 } else {
     front = "/Wiki/";
 }
@@ -29,13 +29,13 @@ function LoadPageStyles(_page) {
     // Créer un élément link pour l'icône favicon
     var faviconLink = document.createElement("link");
     faviconLink.rel = "icon";
-    faviconLink.href = front + "Wiki/IMG/ICO/ICO.ico";
+    faviconLink.href = front + "IMG/ICO/ICO.ico";
 
     // Créer un élément link pour la feuille de style
     var cssLink = document.createElement("link");
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
-    cssLink.href = front + "Wiki/CSS/" + _page + ".css";
+    cssLink.href = front + "CSS/" + _page + ".css";
     
 
     document.title = "o'Bloop - " + _page;
